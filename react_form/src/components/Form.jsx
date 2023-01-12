@@ -7,12 +7,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Form = () => {
+  /* Retrieve the methods needed for the form */
   const { handleChange, handleSubmit, values, errors } = useForm(
     submit,
     validateForm
   );
 
   function submit() {
+    /* Submitted only on success */
     toast.success("The form was submitted successfully", options);
   }
 
@@ -246,24 +248,19 @@ const Form = () => {
               {values.file === "" ? "Upload File" : values.file}
             </label>
 
-            {/* <input
-            className="checkbox__input required"
-            type="file"
-            name="file"
-            value={values.file}
-            onChange={handleChange}
-          /> */}
             {errors.file && <p className="error">{errors.file}</p>}
           </div>
         </section>
 
         <section className="submit__form third">
-          <h1>
+          <h1 className="submit__form-title">
             Please make sure all of the <br />
             required fields are filled
           </h1>
 
-          <h3>Once you are ready you can click on submit</h3>
+          <h3 className="submit__form-subtitle">
+            Once you are ready you can click on submit
+          </h3>
 
           <input
             className="submit__input"
@@ -273,6 +270,7 @@ const Form = () => {
           />
         </section>
       </form>
+
       <ToastContainer />
     </>
   );

@@ -1,3 +1,4 @@
+/* Exported the input default values for better readability */
 export const inputTypes = {
   email: "",
   number: "",

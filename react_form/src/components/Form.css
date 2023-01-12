@@ -1,3 +1,4 @@
+/* Created areas for positioning of containers */
 .first {
   grid-area: main;
 }
@@ -100,14 +101,14 @@ body {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
 }
 
-h1 {
+.submit__form-title {
   font-size: 20px;
   text-transform: uppercase;
   color: #2c3e50;
   margin-bottom: 10px;
 }
 
-h3 {
+.submit__form-subtitle {
   font-weight: normal;
   font-size: 16px;
   color: #666;

@@ -1,4 +1,4 @@
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import Form from "./Form";
 import user from "@testing-library/user-event";
@@ -75,6 +75,7 @@ describe("AddTeamForm", () => {
   });
 });
 
+/* Functions for getting the input fields for better readability and reusability */
 function getEmail() {
   return screen.getByTestId("test-email");
 }
