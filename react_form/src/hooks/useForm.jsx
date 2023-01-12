@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { inputTypes } from "../utils/allInputs";
+import options from "../utils/toastOptions";
+import { toast } from "react-toastify";
 
 const useForm = (callback, validate) => {
   const [values, setValues] = useState(inputTypes);
@@ -42,7 +44,7 @@ const useForm = (callback, validate) => {
 
           setIsSubmitting(false);
         } catch (error) {
-          alert("Something went wrong.");
+          toast.error("Something went wrong", options);
         }
       };
 
